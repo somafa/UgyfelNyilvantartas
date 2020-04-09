@@ -68,14 +68,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_Fooldal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_Fooldal.Designer.cs">
+      <DependentUpon>Form_Fooldal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Kollega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kollega.Designer.cs">
+      <DependentUpon>Form_Kollega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UjMunka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UjMunka.Designer.cs">
+      <DependentUpon>Form_UjMunka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Reszletek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Reszletek.Designer.cs">
+      <DependentUpon>Form_Reszletek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Ugyfel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ugyfel.Designer.cs">
+      <DependentUpon>Form_Ugyfel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Megrendeles.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Fooldal.resx">
+      <DependentUpon>Form_Fooldal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kollega.resx">
+      <DependentUpon>Form_Kollega.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UjMunka.resx">
+      <DependentUpon>Form_UjMunka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Reszletek.resx">
+      <DependentUpon>Form_Reszletek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ugyfel.resx">
+      <DependentUpon>Form_Ugyfel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
