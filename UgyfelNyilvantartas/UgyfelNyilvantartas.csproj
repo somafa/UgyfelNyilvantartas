@@ -98,9 +98,12 @@
     <Compile Include="Form_Ugyfel.Designer.cs">
       <DependentUpon>Form_Ugyfel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kollega.cs" />
     <Compile Include="Megrendeles.cs" />
+    <Compile Include="Nyelvek.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ugyfel.cs" />
     <EmbeddedResource Include="Form_Fooldal.resx">
       <DependentUpon>Form_Fooldal.cs</DependentUpon>
     </EmbeddedResource>

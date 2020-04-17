@@ -63,7 +63,7 @@ namespace UgyfelNyilvantartas
 
         private void button_frissit_Click(object sender, EventArgs e)
         {
-
+            //DG_Fooldal_Frissit();
         }
 
         private void frissitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,7 +73,8 @@ namespace UgyfelNyilvantartas
 
         private void button_kilep_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Biztos kilép?");
+            Environment.Exit(0);
         }
 
         private void kilepToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +109,7 @@ namespace UgyfelNyilvantartas
                 if (checkBox_Aktiv.Checked && item.Statusz!="letudva")
                 {
                     int sor_index = DG_Fooldal.Rows.Add();
+                    DG_Fooldal.Rows[sor_index].Cells["MunkaID"].Value = item.Megrendeles_ID;
                     DG_Fooldal.Rows[sor_index].Cells["MunkaFelvetel"].Value = item.Felvetel.ToString("yyyy.MM.dd");
                     DG_Fooldal.Rows[sor_index].Cells["UgyfelNev"].Value = item.Ugyfel_nev;
                     DG_Fooldal.Rows[sor_index].Cells["Leiras"].Value = item.Leiras;
@@ -123,6 +125,7 @@ namespace UgyfelNyilvantartas
                 else if(!checkBox_Aktiv.Checked)
                 {
                     int sor_index = DG_Fooldal.Rows.Add();
+                    DG_Fooldal.Rows[sor_index].Cells["MunkaID"].Value = item.Megrendeles_ID;
                     DG_Fooldal.Rows[sor_index].Cells["MunkaFelvetel"].Value = item.Felvetel.ToString("yyyy.MM.dd");
                     DG_Fooldal.Rows[sor_index].Cells["UgyfelNev"].Value = item.Ugyfel_nev;
                     DG_Fooldal.Rows[sor_index].Cells["Leiras"].Value = item.Leiras;
@@ -136,34 +139,6 @@ namespace UgyfelNyilvantartas
                     DG_Fooldal.Rows[sor_index].Cells["Statusz"].Value = item.Statusz;
                 }
             }
-            
-           /* Program.sql.CommandText = "SELECT `felvetel_datuma`,`u_nev`,`leiras`,`kiindulasi_nyelv`,`celnyelv`,`k_nev`,`vegleges_ar`,`hatarido`,`eddig_fizetett`,`elkeszult_datum`,`statusz` FROM `dg_fooldal` WHERE `statusz`<>'letudva';";
-            try
-            {
-                using (MySqlDataReader dr = Program.sql.ExecuteReader())
-                {
-                    DG_Fooldal.Rows.Clear();
-                    while (dr.Read())
-                    {
-                        int sor_index = DG_Fooldal.Rows.Add();
-                        DG_Fooldal.Rows[sor_index].Cells["MunkaFelvetel"].Value = dr.GetMySqlDateTime("felvetel_datuma");
-                        DG_Fooldal.Rows[sor_index].Cells["UgyfelNev"].Value = dr.GetString("u_nev");
-                        DG_Fooldal.Rows[sor_index].Cells["Leiras"].Value = dr.GetString("leiras");
-                        DG_Fooldal.Rows[sor_index].Cells["ForrasNyelv"].Value = dr.GetString("kiindulasi_nyelv");
-                        DG_Fooldal.Rows[sor_index].Cells["CelNyelv"].Value = dr.GetString("celnyelv");
-                        DG_Fooldal.Rows[sor_index].Cells["KollegaNev"].Value = dr.GetString("k_nev");
-                        /*DG_Fooldal.Rows[sor_index].Cells["VeglegesAr"].Value = dr.GetInt32("vegleges_ar");
-                        DG_Fooldal.Rows[sor_index].Cells["Hatarido"].Value = dr.GetMySqlDateTime("hatarido");
-                        DG_Fooldal.Rows[sor_index].Cells["EddigFizetve"].Value = dr.GetInt32("eddig_fizetett");
-                        DG_Fooldal.Rows[sor_index].Cells["ElkeszultDatum"].Value = dr.GetMySqlDateTime("elkeszult_datum");
-                        DG_Fooldal.Rows[sor_index].Cells["Statusz"].Value = dr.GetString("statusz");
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }*/
         }
 
         private void DG_Fooldal_SelectionChanged(object sender, EventArgs e)

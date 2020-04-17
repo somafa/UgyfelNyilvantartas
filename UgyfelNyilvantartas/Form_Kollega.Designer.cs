@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBox_keresomezo = new System.Windows.Forms.TextBox();
+            this.textBox_koll_keresomezo = new System.Windows.Forms.TextBox();
             this.button_fooldalra = new System.Windows.Forms.Button();
             this.button_mentes = new System.Windows.Forms.Button();
             this.button_modositas = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.button_hasznal = new System.Windows.Forms.Button();
             this.button_Egyenleg = new System.Windows.Forms.Button();
             this.button_kereses = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_nyelvek = new System.Windows.Forms.ComboBox();
             this.DG_Kollega_kollega = new System.Windows.Forms.DataGridView();
             this.DG_Kollega_kifizetes = new System.Windows.Forms.DataGridView();
             this.Datum = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,17 +50,6 @@
             this.MiFizettunk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox_kifizetes = new System.Windows.Forms.TextBox();
             this.DG_Kollega_egyenleg = new System.Windows.Forms.DataGridView();
-            this.Nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefonszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmailCim = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MasElerhetoseg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adoszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cegjegyzekszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Szekhely = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IBAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nyelvek = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Megjegyzes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.megrendelesFelvetele = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ugyfelNeve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.megrendelesLeiras = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,18 +60,31 @@
             this.munkaStatusza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolleganakDolgoztunk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kolleganakFizettunk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KollegaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefonszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmailCim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MasElerhetoseg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adoszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cegjegyzekszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Szekhely = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IBAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nyelvek = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SzemSzam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Megjegyzes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Kollega_kollega)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Kollega_kifizetes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Kollega_egyenleg)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox_keresomezo
+            // textBox_koll_keresomezo
             // 
-            this.textBox_keresomezo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_keresomezo.Location = new System.Drawing.Point(385, 96);
-            this.textBox_keresomezo.Name = "textBox_keresomezo";
-            this.textBox_keresomezo.Size = new System.Drawing.Size(175, 24);
-            this.textBox_keresomezo.TabIndex = 18;
+            this.textBox_koll_keresomezo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_koll_keresomezo.Location = new System.Drawing.Point(385, 96);
+            this.textBox_koll_keresomezo.Name = "textBox_koll_keresomezo";
+            this.textBox_koll_keresomezo.Size = new System.Drawing.Size(175, 24);
+            this.textBox_koll_keresomezo.TabIndex = 18;
             // 
             // button_fooldalra
             // 
@@ -110,6 +112,7 @@
             this.button_mentes.TabIndex = 10;
             this.button_mentes.Text = "Mentés";
             this.button_mentes.UseVisualStyleBackColor = false;
+            this.button_mentes.Click += new System.EventHandler(this.button_mentes_Click);
             // 
             // button_modositas
             // 
@@ -123,6 +126,7 @@
             this.button_modositas.TabIndex = 11;
             this.button_modositas.Text = "Módosítás";
             this.button_modositas.UseVisualStyleBackColor = false;
+            this.button_modositas.Click += new System.EventHandler(this.button_modositas_Click);
             // 
             // button_ujKollega
             // 
@@ -136,6 +140,7 @@
             this.button_ujKollega.TabIndex = 12;
             this.button_ujKollega.Text = "Új kolléga";
             this.button_ujKollega.UseVisualStyleBackColor = false;
+            this.button_ujKollega.Click += new System.EventHandler(this.button_ujKollega_Click);
             // 
             // button_hasznal
             // 
@@ -176,14 +181,15 @@
             this.button_kereses.TabIndex = 13;
             this.button_kereses.Text = "Keresés";
             this.button_kereses.UseVisualStyleBackColor = false;
+            this.button_kereses.Click += new System.EventHandler(this.button_kereses_Click);
             // 
-            // comboBox1
+            // comboBox_nyelvek
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(852, 99);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 21);
-            this.comboBox1.TabIndex = 20;
+            this.comboBox_nyelvek.FormattingEnabled = true;
+            this.comboBox_nyelvek.Location = new System.Drawing.Point(852, 99);
+            this.comboBox_nyelvek.Name = "comboBox_nyelvek";
+            this.comboBox_nyelvek.Size = new System.Drawing.Size(153, 21);
+            this.comboBox_nyelvek.TabIndex = 20;
             // 
             // DG_Kollega_kollega
             // 
@@ -197,6 +203,7 @@
             this.DG_Kollega_kollega.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DG_Kollega_kollega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Kollega_kollega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.KollegaID,
             this.Nev,
             this.Telefonszam,
             this.EmailCim,
@@ -207,11 +214,15 @@
             this.Bank,
             this.IBAN,
             this.Nyelvek,
+            this.SzemSzam,
             this.Megjegyzes});
             this.DG_Kollega_kollega.Location = new System.Drawing.Point(10, 133);
+            this.DG_Kollega_kollega.MultiSelect = false;
             this.DG_Kollega_kollega.Name = "DG_Kollega_kollega";
+            this.DG_Kollega_kollega.ReadOnly = true;
             this.DG_Kollega_kollega.Size = new System.Drawing.Size(1230, 105);
             this.DG_Kollega_kollega.TabIndex = 21;
+            this.DG_Kollega_kollega.SelectionChanged += new System.EventHandler(this.DG_Kollega_kollega_SelectionChanged);
             // 
             // DG_Kollega_kifizetes
             // 
@@ -301,83 +312,6 @@
             this.DG_Kollega_egyenleg.Size = new System.Drawing.Size(1230, 177);
             this.DG_Kollega_egyenleg.TabIndex = 24;
             // 
-            // Nev
-            // 
-            this.Nev.Frozen = true;
-            this.Nev.HeaderText = "név";
-            this.Nev.Name = "Nev";
-            this.Nev.ReadOnly = true;
-            // 
-            // Telefonszam
-            // 
-            this.Telefonszam.Frozen = true;
-            this.Telefonszam.HeaderText = "telefonszám";
-            this.Telefonszam.Name = "Telefonszam";
-            this.Telefonszam.ReadOnly = true;
-            // 
-            // EmailCim
-            // 
-            this.EmailCim.Frozen = true;
-            this.EmailCim.HeaderText = "e-mail cím";
-            this.EmailCim.Name = "EmailCim";
-            this.EmailCim.ReadOnly = true;
-            // 
-            // MasElerhetoseg
-            // 
-            this.MasElerhetoseg.Frozen = true;
-            this.MasElerhetoseg.HeaderText = "más elérhetőség";
-            this.MasElerhetoseg.Name = "MasElerhetoseg";
-            this.MasElerhetoseg.ReadOnly = true;
-            // 
-            // Adoszam
-            // 
-            this.Adoszam.Frozen = true;
-            this.Adoszam.HeaderText = "adószám";
-            this.Adoszam.Name = "Adoszam";
-            this.Adoszam.ReadOnly = true;
-            // 
-            // Cegjegyzekszam
-            // 
-            this.Cegjegyzekszam.Frozen = true;
-            this.Cegjegyzekszam.HeaderText = "cégjegyzékszám";
-            this.Cegjegyzekszam.Name = "Cegjegyzekszam";
-            this.Cegjegyzekszam.ReadOnly = true;
-            // 
-            // Szekhely
-            // 
-            this.Szekhely.Frozen = true;
-            this.Szekhely.HeaderText = "székhely / cím";
-            this.Szekhely.Name = "Szekhely";
-            this.Szekhely.ReadOnly = true;
-            // 
-            // Bank
-            // 
-            this.Bank.Frozen = true;
-            this.Bank.HeaderText = "bank";
-            this.Bank.Name = "Bank";
-            this.Bank.ReadOnly = true;
-            // 
-            // IBAN
-            // 
-            this.IBAN.Frozen = true;
-            this.IBAN.HeaderText = "IBAN";
-            this.IBAN.Name = "IBAN";
-            this.IBAN.ReadOnly = true;
-            // 
-            // Nyelvek
-            // 
-            this.Nyelvek.Frozen = true;
-            this.Nyelvek.HeaderText = "nyelvek";
-            this.Nyelvek.Name = "Nyelvek";
-            this.Nyelvek.ReadOnly = true;
-            // 
-            // Megjegyzes
-            // 
-            this.Megjegyzes.Frozen = true;
-            this.Megjegyzes.HeaderText = "megjegyzés";
-            this.Megjegyzes.Name = "Megjegyzes";
-            this.Megjegyzes.ReadOnly = true;
-            // 
             // megrendelesFelvetele
             // 
             this.megrendelesFelvetele.Frozen = true;
@@ -448,6 +382,85 @@
             this.kolleganakFizettunk.Name = "kolleganakFizettunk";
             this.kolleganakFizettunk.ReadOnly = true;
             // 
+            // KollegaID
+            // 
+            this.KollegaID.HeaderText = "KollegaID";
+            this.KollegaID.Name = "KollegaID";
+            this.KollegaID.ReadOnly = true;
+            this.KollegaID.Visible = false;
+            // 
+            // Nev
+            // 
+            this.Nev.HeaderText = "név";
+            this.Nev.Name = "Nev";
+            this.Nev.ReadOnly = true;
+            // 
+            // Telefonszam
+            // 
+            this.Telefonszam.HeaderText = "telefonszám";
+            this.Telefonszam.Name = "Telefonszam";
+            this.Telefonszam.ReadOnly = true;
+            // 
+            // EmailCim
+            // 
+            this.EmailCim.HeaderText = "e-mail cím";
+            this.EmailCim.Name = "EmailCim";
+            this.EmailCim.ReadOnly = true;
+            // 
+            // MasElerhetoseg
+            // 
+            this.MasElerhetoseg.HeaderText = "más elérhetőség";
+            this.MasElerhetoseg.Name = "MasElerhetoseg";
+            this.MasElerhetoseg.ReadOnly = true;
+            // 
+            // Adoszam
+            // 
+            this.Adoszam.HeaderText = "adószám";
+            this.Adoszam.Name = "Adoszam";
+            this.Adoszam.ReadOnly = true;
+            // 
+            // Cegjegyzekszam
+            // 
+            this.Cegjegyzekszam.HeaderText = "cégjegyzékszám";
+            this.Cegjegyzekszam.Name = "Cegjegyzekszam";
+            this.Cegjegyzekszam.ReadOnly = true;
+            // 
+            // Szekhely
+            // 
+            this.Szekhely.HeaderText = "székhely / cím";
+            this.Szekhely.Name = "Szekhely";
+            this.Szekhely.ReadOnly = true;
+            // 
+            // Bank
+            // 
+            this.Bank.HeaderText = "bank";
+            this.Bank.Name = "Bank";
+            this.Bank.ReadOnly = true;
+            // 
+            // IBAN
+            // 
+            this.IBAN.HeaderText = "IBAN";
+            this.IBAN.Name = "IBAN";
+            this.IBAN.ReadOnly = true;
+            // 
+            // Nyelvek
+            // 
+            this.Nyelvek.HeaderText = "nyelvek";
+            this.Nyelvek.Name = "Nyelvek";
+            this.Nyelvek.ReadOnly = true;
+            // 
+            // SzemSzam
+            // 
+            this.SzemSzam.HeaderText = "személyi szám";
+            this.SzemSzam.Name = "SzemSzam";
+            this.SzemSzam.ReadOnly = true;
+            // 
+            // Megjegyzes
+            // 
+            this.Megjegyzes.HeaderText = "megjegyzés";
+            this.Megjegyzes.Name = "Megjegyzes";
+            this.Megjegyzes.ReadOnly = true;
+            // 
             // form_Kollega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,9 +470,9 @@
             this.Controls.Add(this.DG_Kollega_kifizetes);
             this.Controls.Add(this.textBox_kifizetes);
             this.Controls.Add(this.DG_Kollega_kollega);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_nyelvek);
             this.Controls.Add(this.button_Egyenleg);
-            this.Controls.Add(this.textBox_keresomezo);
+            this.Controls.Add(this.textBox_koll_keresomezo);
             this.Controls.Add(this.button_fooldalra);
             this.Controls.Add(this.button_mentes);
             this.Controls.Add(this.button_modositas);
@@ -468,6 +481,7 @@
             this.Controls.Add(this.button_hasznal);
             this.Name = "form_Kollega";
             this.Text = "Kolléga";
+            this.Load += new System.EventHandler(this.form_Kollega_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Kollega_kollega)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Kollega_kifizetes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Kollega_egyenleg)).EndInit();
@@ -478,7 +492,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_keresomezo;
+        private System.Windows.Forms.TextBox textBox_koll_keresomezo;
         private System.Windows.Forms.Button button_fooldalra;
         private System.Windows.Forms.Button button_mentes;
         private System.Windows.Forms.Button button_modositas;
@@ -486,7 +500,7 @@
         private System.Windows.Forms.Button button_hasznal;
         private System.Windows.Forms.Button button_Egyenleg;
         private System.Windows.Forms.Button button_kereses;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_nyelvek;
         private System.Windows.Forms.DataGridView DG_Kollega_kollega;
         private System.Windows.Forms.DataGridView DG_Kollega_kifizetes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Datum;
@@ -494,17 +508,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MiFizettunk;
         private System.Windows.Forms.TextBox textBox_kifizetes;
         private System.Windows.Forms.DataGridView DG_Kollega_egyenleg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefonszam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EmailCim;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MasElerhetoseg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adoszam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cegjegyzekszam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Szekhely;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Bank;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IBAN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nyelvek;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Megjegyzes;
         private System.Windows.Forms.DataGridViewTextBoxColumn megrendelesFelvetele;
         private System.Windows.Forms.DataGridViewTextBoxColumn ugyfelNeve;
         private System.Windows.Forms.DataGridViewTextBoxColumn megrendelesLeiras;
@@ -515,5 +518,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn munkaStatusza;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolleganakDolgoztunk;
         private System.Windows.Forms.DataGridViewTextBoxColumn kolleganakFizettunk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn KollegaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefonszam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmailCim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MasElerhetoseg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Adoszam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cegjegyzekszam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Szekhely;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bank;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IBAN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nyelvek;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SzemSzam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Megjegyzes;
     }
 }

@@ -57,6 +57,7 @@
             this.dateTimePicker_Vegso = new System.Windows.Forms.DateTimePicker();
             this.button_Ellenorzes = new System.Windows.Forms.Button();
             this.checkedListBox_statusz = new System.Windows.Forms.CheckedListBox();
+            this.UgyfelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefonszam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmailCim = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,6 +99,7 @@
             this.button_mentes.TabIndex = 2;
             this.button_mentes.Text = "Mentés";
             this.button_mentes.UseVisualStyleBackColor = false;
+            this.button_mentes.Click += new System.EventHandler(this.button_mentes_Click);
             // 
             // button_modositas
             // 
@@ -111,6 +113,7 @@
             this.button_modositas.TabIndex = 3;
             this.button_modositas.Text = "Módosítás";
             this.button_modositas.UseVisualStyleBackColor = false;
+            this.button_modositas.Click += new System.EventHandler(this.button_modositas_Click);
             // 
             // button_ujUgyfel
             // 
@@ -124,6 +127,7 @@
             this.button_ujUgyfel.TabIndex = 4;
             this.button_ujUgyfel.Text = "Új ügyfél";
             this.button_ujUgyfel.UseVisualStyleBackColor = false;
+            this.button_ujUgyfel.Click += new System.EventHandler(this.button_ujUgyfel_Click);
             // 
             // button_hasznal
             // 
@@ -192,6 +196,7 @@
             this.button_kereses.TabIndex = 5;
             this.button_kereses.Text = "Keresés";
             this.button_kereses.UseVisualStyleBackColor = false;
+            this.button_kereses.Click += new System.EventHandler(this.button_kereses_Click);
             // 
             // DG_Ugyfel_ugyfel
             // 
@@ -205,6 +210,7 @@
             this.DG_Ugyfel_ugyfel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DG_Ugyfel_ugyfel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Ugyfel_ugyfel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UgyfelID,
             this.Nev,
             this.Telefonszam,
             this.EmailCim,
@@ -218,8 +224,11 @@
             this.Megjegyzes});
             this.DG_Ugyfel_ugyfel.Location = new System.Drawing.Point(12, 133);
             this.DG_Ugyfel_ugyfel.Name = "DG_Ugyfel_ugyfel";
+            this.DG_Ugyfel_ugyfel.ReadOnly = true;
+            this.DG_Ugyfel_ugyfel.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Ugyfel_ugyfel.Size = new System.Drawing.Size(1230, 150);
             this.DG_Ugyfel_ugyfel.TabIndex = 9;
+            this.DG_Ugyfel_ugyfel.SelectionChanged += new System.EventHandler(this.DG_Ugyfel_ugyfel_SelectionChanged);
             // 
             // DG_Ugyfel_ellenorzes
             // 
@@ -246,82 +255,72 @@
             this.statusz});
             this.DG_Ugyfel_ellenorzes.Location = new System.Drawing.Point(12, 347);
             this.DG_Ugyfel_ellenorzes.Name = "DG_Ugyfel_ellenorzes";
+            this.DG_Ugyfel_ellenorzes.ReadOnly = true;
             this.DG_Ugyfel_ellenorzes.Size = new System.Drawing.Size(1230, 177);
             this.DG_Ugyfel_ellenorzes.TabIndex = 10;
             // 
             // megrendelesFelvetele
             // 
-            this.megrendelesFelvetele.Frozen = true;
             this.megrendelesFelvetele.HeaderText = "megrendelés felvétele";
             this.megrendelesFelvetele.Name = "megrendelesFelvetele";
             this.megrendelesFelvetele.ReadOnly = true;
             // 
             // ugyfelNeve
             // 
-            this.ugyfelNeve.Frozen = true;
             this.ugyfelNeve.HeaderText = "ügyfél neve";
             this.ugyfelNeve.Name = "ugyfelNeve";
             this.ugyfelNeve.ReadOnly = true;
             // 
             // megrendelesLeiras
             // 
-            this.megrendelesLeiras.Frozen = true;
             this.megrendelesLeiras.HeaderText = "megrendelés rövid leírása";
             this.megrendelesLeiras.Name = "megrendelesLeiras";
             this.megrendelesLeiras.ReadOnly = true;
             // 
             // kiindulasiNyelv
             // 
-            this.kiindulasiNyelv.Frozen = true;
             this.kiindulasiNyelv.HeaderText = "kiindulási nyelv";
             this.kiindulasiNyelv.Name = "kiindulasiNyelv";
             this.kiindulasiNyelv.ReadOnly = true;
             // 
             // celNyelv
             // 
-            this.celNyelv.Frozen = true;
             this.celNyelv.HeaderText = "célnyelv";
             this.celNyelv.Name = "celNyelv";
             this.celNyelv.ReadOnly = true;
             // 
             // veglegesAr
             // 
-            this.veglegesAr.Frozen = true;
             this.veglegesAr.HeaderText = "végleges ár";
             this.veglegesAr.Name = "veglegesAr";
             this.veglegesAr.ReadOnly = true;
             // 
             // hatarido
             // 
-            this.hatarido.Frozen = true;
             this.hatarido.HeaderText = "határidő";
             this.hatarido.Name = "hatarido";
             this.hatarido.ReadOnly = true;
             // 
             // eddigFizetveOsszeg
             // 
-            this.eddigFizetveOsszeg.Frozen = true;
             this.eddigFizetveOsszeg.HeaderText = "eddig fizetve";
             this.eddigFizetveOsszeg.Name = "eddigFizetveOsszeg";
             this.eddigFizetveOsszeg.ReadOnly = true;
             // 
             // eddigFizetveDatum
             // 
-            this.eddigFizetveDatum.Frozen = true;
             this.eddigFizetveDatum.HeaderText = "mikor";
             this.eddigFizetveDatum.Name = "eddigFizetveDatum";
             this.eddigFizetveDatum.ReadOnly = true;
             // 
             // elkeszultDatum
             // 
-            this.elkeszultDatum.Frozen = true;
             this.elkeszultDatum.HeaderText = "elkészült";
             this.elkeszultDatum.Name = "elkeszultDatum";
             this.elkeszultDatum.ReadOnly = true;
             // 
             // statusz
             // 
-            this.statusz.Frozen = true;
             this.statusz.HeaderText = "státusz";
             this.statusz.Name = "statusz";
             this.statusz.ReadOnly = true;
@@ -370,79 +369,75 @@
             this.checkedListBox_statusz.Size = new System.Drawing.Size(120, 52);
             this.checkedListBox_statusz.TabIndex = 12;
             // 
+            // UgyfelID
+            // 
+            this.UgyfelID.HeaderText = "UgyfelID";
+            this.UgyfelID.Name = "UgyfelID";
+            this.UgyfelID.ReadOnly = true;
+            this.UgyfelID.Visible = false;
+            // 
             // Nev
             // 
-            this.Nev.Frozen = true;
             this.Nev.HeaderText = "név";
             this.Nev.Name = "Nev";
             this.Nev.ReadOnly = true;
             // 
             // Telefonszam
             // 
-            this.Telefonszam.Frozen = true;
             this.Telefonszam.HeaderText = "telefonszám";
             this.Telefonszam.Name = "Telefonszam";
             this.Telefonszam.ReadOnly = true;
             // 
             // EmailCim
             // 
-            this.EmailCim.Frozen = true;
             this.EmailCim.HeaderText = "e-mail cím";
             this.EmailCim.Name = "EmailCim";
             this.EmailCim.ReadOnly = true;
             // 
             // MasElerhetoseg
             // 
-            this.MasElerhetoseg.Frozen = true;
             this.MasElerhetoseg.HeaderText = "más elérhetőség";
             this.MasElerhetoseg.Name = "MasElerhetoseg";
             this.MasElerhetoseg.ReadOnly = true;
             // 
             // Adoszam
             // 
-            this.Adoszam.Frozen = true;
             this.Adoszam.HeaderText = "adószám";
             this.Adoszam.Name = "Adoszam";
             this.Adoszam.ReadOnly = true;
             // 
             // Cegjegyzekszam
             // 
-            this.Cegjegyzekszam.Frozen = true;
             this.Cegjegyzekszam.HeaderText = "cégjegyzékszám";
             this.Cegjegyzekszam.Name = "Cegjegyzekszam";
             this.Cegjegyzekszam.ReadOnly = true;
             // 
             // Szekhely
             // 
-            this.Szekhely.Frozen = true;
             this.Szekhely.HeaderText = "székhely / cím";
             this.Szekhely.Name = "Szekhely";
             this.Szekhely.ReadOnly = true;
             // 
             // Bank
             // 
-            this.Bank.Frozen = true;
             this.Bank.HeaderText = "bank";
             this.Bank.Name = "Bank";
             this.Bank.ReadOnly = true;
             // 
             // IBAN
             // 
-            this.IBAN.Frozen = true;
             this.IBAN.HeaderText = "IBAN";
             this.IBAN.Name = "IBAN";
             this.IBAN.ReadOnly = true;
             // 
             // Kategoria
             // 
-            this.Kategoria.Frozen = true;
             this.Kategoria.HeaderText = "kategória";
             this.Kategoria.Name = "Kategoria";
             this.Kategoria.ReadOnly = true;
             // 
             // Megjegyzes
             // 
-            this.Megjegyzes.Frozen = true;
             this.Megjegyzes.HeaderText = "megjegyzés";
             this.Megjegyzes.Name = "Megjegyzes";
             this.Megjegyzes.ReadOnly = true;
@@ -470,6 +465,7 @@
             this.Controls.Add(this.button_hasznal);
             this.Name = "form_Ugyfel";
             this.Text = "Ügyfél";
+            this.Load += new System.EventHandler(this.form_Ugyfel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DG_Ugyfel_ugyfel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DG_Ugyfel_ellenorzes)).EndInit();
             this.ResumeLayout(false);
@@ -506,6 +502,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn eddigFizetveDatum;
         private System.Windows.Forms.DataGridViewTextBoxColumn elkeszultDatum;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusz;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UgyfelID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nev;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefonszam;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmailCim;

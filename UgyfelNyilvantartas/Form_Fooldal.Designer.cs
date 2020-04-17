@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button_kollega = new System.Windows.Forms.Button();
             this.DG_Fooldal = new System.Windows.Forms.DataGridView();
+            this.MunkaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MunkaFelvetel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UgyfelNev = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Leiras = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,16 +87,17 @@
             // 
             // DG_Fooldal
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Fooldal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Fooldal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DG_Fooldal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Fooldal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MunkaID,
             this.MunkaFelvetel,
             this.UgyfelNev,
             this.Leiras,
@@ -109,10 +111,18 @@
             this.Statusz});
             this.DG_Fooldal.Location = new System.Drawing.Point(12, 91);
             this.DG_Fooldal.Name = "DG_Fooldal";
+            this.DG_Fooldal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Fooldal.Size = new System.Drawing.Size(1228, 424);
             this.DG_Fooldal.TabIndex = 1;
             this.DG_Fooldal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DG_Fooldal_CellContentClick);
             this.DG_Fooldal.SelectionChanged += new System.EventHandler(this.DG_Fooldal_SelectionChanged);
+            // 
+            // MunkaID
+            // 
+            this.MunkaID.HeaderText = "MunkaID";
+            this.MunkaID.Name = "MunkaID";
+            this.MunkaID.ReadOnly = true;
+            this.MunkaID.Visible = false;
             // 
             // MunkaFelvetel
             // 
@@ -457,6 +467,8 @@
         private System.Windows.Forms.ToolStripMenuItem frissitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kilepToolStripMenuItem;
         private System.Windows.Forms.Button button_reszletek;
+        private System.Windows.Forms.CheckBox checkBox_Aktiv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MunkaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn MunkaFelvetel;
         private System.Windows.Forms.DataGridViewTextBoxColumn UgyfelNev;
         private System.Windows.Forms.DataGridViewTextBoxColumn Leiras;
@@ -468,7 +480,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EddigFizetve;
         private System.Windows.Forms.DataGridViewTextBoxColumn ElkeszultDatum;
         private System.Windows.Forms.DataGridViewTextBoxColumn Statusz;
-        private System.Windows.Forms.CheckBox checkBox_Aktiv;
     }
 }
 

@@ -29,28 +29,32 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox_Reszletek_leiras = new System.Windows.Forms.TextBox();
             this.DG_Reszletek_koltsegek = new System.Windows.Forms.DataGridView();
             this.KollegaDija = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,10 +96,12 @@
             // 
             // textBox_Reszletek_leiras
             // 
-            this.textBox_Reszletek_leiras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_Reszletek_leiras.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_Reszletek_leiras.Location = new System.Drawing.Point(33, 419);
+            this.textBox_Reszletek_leiras.Multiline = true;
             this.textBox_Reszletek_leiras.Name = "textBox_Reszletek_leiras";
-            this.textBox_Reszletek_leiras.Size = new System.Drawing.Size(641, 22);
+            this.textBox_Reszletek_leiras.ReadOnly = true;
+            this.textBox_Reszletek_leiras.Size = new System.Drawing.Size(655, 66);
             this.textBox_Reszletek_leiras.TabIndex = 19;
             this.textBox_Reszletek_leiras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -114,8 +120,17 @@
             this.KollegaDija,
             this.Hitelesites,
             this.Futar});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_Reszletek_koltsegek.DefaultCellStyle = dataGridViewCellStyle5;
             this.DG_Reszletek_koltsegek.Location = new System.Drawing.Point(879, 419);
             this.DG_Reszletek_koltsegek.Name = "DG_Reszletek_koltsegek";
+            this.DG_Reszletek_koltsegek.ReadOnly = true;
             this.DG_Reszletek_koltsegek.Size = new System.Drawing.Size(343, 66);
             this.DG_Reszletek_koltsegek.TabIndex = 17;
             // 
@@ -148,40 +163,49 @@
             // 
             // DG_Reszletek_kollega
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Reszletek_kollega.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Reszletek_kollega.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DG_Reszletek_kollega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Reszletek_kollega.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.KollegaNev});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_Reszletek_kollega.DefaultCellStyle = dataGridViewCellStyle8;
             this.DG_Reszletek_kollega.Location = new System.Drawing.Point(983, 290);
             this.DG_Reszletek_kollega.Name = "DG_Reszletek_kollega";
+            this.DG_Reszletek_kollega.ReadOnly = true;
             this.DG_Reszletek_kollega.Size = new System.Drawing.Size(239, 66);
             this.DG_Reszletek_kollega.TabIndex = 18;
             // 
             // KollegaNev
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.KollegaNev.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.KollegaNev.DefaultCellStyle = dataGridViewCellStyle7;
             this.KollegaNev.HeaderText = "név";
             this.KollegaNev.Name = "KollegaNev";
             this.KollegaNev.ReadOnly = true;
             // 
             // DG_Reszletek_ugyfel
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Reszletek_ugyfel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Reszletek_ugyfel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.DG_Reszletek_ugyfel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Reszletek_ugyfel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UgyfelNev,
@@ -190,69 +214,78 @@
             this.MasElerhetoseg,
             this.Megjegyzes,
             this.Kategoria});
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_Reszletek_ugyfel.DefaultCellStyle = dataGridViewCellStyle16;
             this.DG_Reszletek_ugyfel.Location = new System.Drawing.Point(33, 290);
             this.DG_Reszletek_ugyfel.Name = "DG_Reszletek_ugyfel";
-            this.DG_Reszletek_ugyfel.Size = new System.Drawing.Size(641, 66);
+            this.DG_Reszletek_ugyfel.ReadOnly = true;
+            this.DG_Reszletek_ugyfel.Size = new System.Drawing.Size(655, 66);
             this.DG_Reszletek_ugyfel.TabIndex = 16;
             // 
             // UgyfelNev
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.UgyfelNev.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.UgyfelNev.DefaultCellStyle = dataGridViewCellStyle10;
             this.UgyfelNev.HeaderText = "név";
             this.UgyfelNev.Name = "UgyfelNev";
             this.UgyfelNev.ReadOnly = true;
             // 
             // Telefonszam
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Telefonszam.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Telefonszam.DefaultCellStyle = dataGridViewCellStyle11;
             this.Telefonszam.HeaderText = "telefonszám";
             this.Telefonszam.Name = "Telefonszam";
             this.Telefonszam.ReadOnly = true;
             // 
             // EmailCim
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.EmailCim.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.EmailCim.DefaultCellStyle = dataGridViewCellStyle12;
             this.EmailCim.HeaderText = "e-mail cím";
             this.EmailCim.Name = "EmailCim";
             this.EmailCim.ReadOnly = true;
             // 
             // MasElerhetoseg
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.MasElerhetoseg.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.MasElerhetoseg.DefaultCellStyle = dataGridViewCellStyle13;
             this.MasElerhetoseg.HeaderText = "más elérhetőség";
             this.MasElerhetoseg.Name = "MasElerhetoseg";
             this.MasElerhetoseg.ReadOnly = true;
             // 
             // Megjegyzes
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Megjegyzes.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Megjegyzes.DefaultCellStyle = dataGridViewCellStyle14;
             this.Megjegyzes.HeaderText = "megjegyzés";
             this.Megjegyzes.Name = "Megjegyzes";
             this.Megjegyzes.ReadOnly = true;
             // 
             // Kategoria
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Kategoria.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Kategoria.DefaultCellStyle = dataGridViewCellStyle15;
             this.Kategoria.HeaderText = "kategória";
             this.Kategoria.Name = "Kategoria";
             this.Kategoria.ReadOnly = true;
             // 
             // DG_Reszletek_megrendeles
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DG_Reszletek_megrendeles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DG_Reszletek_megrendeles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.DG_Reszletek_megrendeles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DG_Reszletek_megrendeles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FelvetelDatum,
@@ -264,8 +297,17 @@
             this.KiindulasiNyelv,
             this.CelNyelv,
             this.Statusz});
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DG_Reszletek_megrendeles.DefaultCellStyle = dataGridViewCellStyle27;
             this.DG_Reszletek_megrendeles.Location = new System.Drawing.Point(33, 157);
             this.DG_Reszletek_megrendeles.Name = "DG_Reszletek_megrendeles";
+            this.DG_Reszletek_megrendeles.ReadOnly = true;
             this.DG_Reszletek_megrendeles.Size = new System.Drawing.Size(1189, 65);
             this.DG_Reszletek_megrendeles.TabIndex = 15;
             // 
@@ -297,7 +339,7 @@
             this.textBox_leiras.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_leiras.Location = new System.Drawing.Point(33, 389);
             this.textBox_leiras.Name = "textBox_leiras";
-            this.textBox_leiras.Size = new System.Drawing.Size(641, 24);
+            this.textBox_leiras.Size = new System.Drawing.Size(655, 24);
             this.textBox_leiras.TabIndex = 12;
             this.textBox_leiras.Text = "megrendelés rövid leírása";
             this.textBox_leiras.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -308,7 +350,7 @@
             this.textBox_ugyfel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox_ugyfel.Location = new System.Drawing.Point(33, 260);
             this.textBox_ugyfel.Name = "textBox_ugyfel";
-            this.textBox_ugyfel.Size = new System.Drawing.Size(641, 24);
+            this.textBox_ugyfel.Size = new System.Drawing.Size(655, 24);
             this.textBox_ugyfel.TabIndex = 13;
             this.textBox_ugyfel.Text = "ügyfél";
             this.textBox_ugyfel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -357,6 +399,7 @@
             this.button_modositasEnged.TabIndex = 8;
             this.button_modositasEnged.Text = "Módosítás engedélyezése";
             this.button_modositasEnged.UseVisualStyleBackColor = false;
+            this.button_modositasEnged.Click += new System.EventHandler(this.button_modositasEnged_Click);
             // 
             // button_mentes
             // 
@@ -372,10 +415,10 @@
             // 
             // FelvetelDatum
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.Format = "dd.MM.yyyy";
-            this.FelvetelDatum.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.Format = "dd.MM.yyyy";
+            this.FelvetelDatum.DefaultCellStyle = dataGridViewCellStyle18;
             this.FelvetelDatum.HeaderText = "felvétele";
             this.FelvetelDatum.Name = "FelvetelDatum";
             this.FelvetelDatum.ReadOnly = true;
@@ -383,8 +426,11 @@
             // 
             // Hatarido
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Hatarido.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.Format = "dd.MM.yyyy";
+            dataGridViewCellStyle19.NullValue = null;
+            this.Hatarido.DefaultCellStyle = dataGridViewCellStyle19;
             this.Hatarido.HeaderText = "határidő";
             this.Hatarido.Name = "Hatarido";
             this.Hatarido.ReadOnly = true;
@@ -392,8 +438,8 @@
             // 
             // VeglegesAr
             // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.VeglegesAr.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.VeglegesAr.DefaultCellStyle = dataGridViewCellStyle20;
             this.VeglegesAr.HeaderText = "végleges ár";
             this.VeglegesAr.Name = "VeglegesAr";
             this.VeglegesAr.ReadOnly = true;
@@ -401,8 +447,8 @@
             // 
             // EddigFizetve
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.EddigFizetve.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.EddigFizetve.DefaultCellStyle = dataGridViewCellStyle21;
             this.EddigFizetve.HeaderText = "eddig fizetve";
             this.EddigFizetve.Name = "EddigFizetve";
             this.EddigFizetve.ReadOnly = true;
@@ -410,8 +456,10 @@
             // 
             // FizetveDatum
             // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FizetveDatum.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.Format = "dd.MM.yyyy";
+            this.FizetveDatum.DefaultCellStyle = dataGridViewCellStyle22;
             this.FizetveDatum.HeaderText = "mikor";
             this.FizetveDatum.Name = "FizetveDatum";
             this.FizetveDatum.ReadOnly = true;
@@ -419,8 +467,8 @@
             // 
             // Peldanyszam
             // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Peldanyszam.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Peldanyszam.DefaultCellStyle = dataGridViewCellStyle23;
             this.Peldanyszam.HeaderText = "példányszám";
             this.Peldanyszam.Name = "Peldanyszam";
             this.Peldanyszam.ReadOnly = true;
@@ -428,8 +476,8 @@
             // 
             // KiindulasiNyelv
             // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.KiindulasiNyelv.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.KiindulasiNyelv.DefaultCellStyle = dataGridViewCellStyle24;
             this.KiindulasiNyelv.HeaderText = "kiindulási nyelv";
             this.KiindulasiNyelv.Name = "KiindulasiNyelv";
             this.KiindulasiNyelv.ReadOnly = true;
@@ -437,8 +485,8 @@
             // 
             // CelNyelv
             // 
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CelNyelv.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CelNyelv.DefaultCellStyle = dataGridViewCellStyle25;
             this.CelNyelv.HeaderText = "célnyelv";
             this.CelNyelv.Name = "CelNyelv";
             this.CelNyelv.ReadOnly = true;
@@ -446,8 +494,8 @@
             // 
             // Statusz
             // 
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Statusz.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Statusz.DefaultCellStyle = dataGridViewCellStyle26;
             this.Statusz.HeaderText = "státusz";
             this.Statusz.Name = "Statusz";
             this.Statusz.ReadOnly = true;
