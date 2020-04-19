@@ -139,11 +139,16 @@ namespace UgyfelNyilvantartas
                     DG_Fooldal.Rows[sor_index].Cells["Statusz"].Value = item.Statusz;
                 }
             }
+            DG_Fooldal.Rows[0].Selected = true;
+            Program.kivalasztott = DG_Fooldal.SelectedRows[0];
         }
 
         private void DG_Fooldal_SelectionChanged(object sender, EventArgs e)
         {
-            Program.kivalasztott = DG_Fooldal.SelectedRows[0];
+            if (DG_Fooldal.SelectedRows.Count>0)
+            {
+                Program.kivalasztott = DG_Fooldal.SelectedRows[0];
+            }
         }
 
         private void checkBox_Aktiv_CheckedChanged(object sender, EventArgs e)

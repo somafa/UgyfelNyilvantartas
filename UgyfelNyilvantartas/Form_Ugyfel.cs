@@ -33,7 +33,7 @@ namespace UgyfelNyilvantartas
 
         private void button_kereses_Click(object sender, EventArgs e)
         {
-            if (textBox_keresomezo.Text != "")
+            if (!string.IsNullOrEmpty(textBox_keresomezo.Text.Trim()))
             {
                 DG_Ugyfel_ugyfel_Betoltes();
             }
@@ -94,7 +94,10 @@ namespace UgyfelNyilvantartas
 
         private void DG_Ugyfel_ugyfel_SelectionChanged(object sender, EventArgs e)
         {
-            Program.kivalasztott_ugyfel = DG_Ugyfel_ugyfel.SelectedRows[0];
+            if (DG_Ugyfel_ugyfel.SelectedRows.Count>0)
+            {
+                Program.kivalasztott_ugyfel = DG_Ugyfel_ugyfel.SelectedRows[0];
+            }
         }
         private void Modositasok_mentese()
         {

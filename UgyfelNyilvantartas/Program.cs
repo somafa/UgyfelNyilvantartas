@@ -99,6 +99,7 @@ namespace UgyfelNyilvantartas
         public static void Ugyfelek_betoltese()
         {
             sql.Parameters.Clear();
+            ugyfelek.Clear();
             sql.CommandText = "SELECT u_ID, u_nev, u_telefonszam, u_email, u_mas, u_adoszam, u_cegjegyzekszam, u_szekhely, u_IBAN, u_bank, u_kategoria, u_megjegyzes FROM ugyfel ORDER BY u_ID";
             try
             {
@@ -132,6 +133,7 @@ namespace UgyfelNyilvantartas
         public static void Kollegak_betoltese()
         {
             sql.Parameters.Clear();
+            kollegak.Clear();
             sql.CommandText = "SELECT k_ID, k_nev, k_telefonszam, k_email, k_mas, k_adoszam, k_cegjegyzekszam, k_cim, k_IBAN, k_bank, k_szemelyi_szam, k_megjegyzes FROM kollega ORDER BY k_ID";
             try
             {
@@ -187,6 +189,7 @@ namespace UgyfelNyilvantartas
         }
         public static void Nyelv_lista()
         {
+            nyelvek.Clear();
             sql.Parameters.Clear();
             sql.CommandText = "SELECT megnevezes FROM nyelvek";
             try

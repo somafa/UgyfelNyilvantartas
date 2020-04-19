@@ -43,8 +43,10 @@ namespace UgyfelNyilvantartas
 
         private void form_UjMunka_Load(object sender, EventArgs e)
         {
-            DG_UjMunka_Beallitasok();
+            
             Nyelvek_Combo_feltoltese();
+            DG_UjMunka_Beallitasok();
+            DG_UjMunka_megrendeles.Rows.Add();
         }
 
         private void button_ugyfelKeres_Click(object sender, EventArgs e)
@@ -77,9 +79,11 @@ namespace UgyfelNyilvantartas
         {
             Program.Nyelv_lista();
             var CellSample = new DataGridViewComboBoxCell();
-            CellSample.DataSource = Program.nyelv_megnev;
+            var CellSample2 = new DataGridViewComboBoxCell();
+            CellSample.DataSource = Program.nyelvek.ToArray();
+            CellSample2.DataSource = Program.nyelvek.ToArray();
             DG_UjMunka_megrendeles.Rows[0].Cells["ForrasNyelv"] = CellSample;
-           // DG_UjMunka_megrendeles.Rows[0].Cells["CelNyelvCombo"] = CellSample;
+            DG_UjMunka_megrendeles.Rows[0].Cells["CelNyelvCombo"] = CellSample2;
         }
     }
 }

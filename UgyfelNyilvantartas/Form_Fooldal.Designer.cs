@@ -110,6 +110,7 @@
             this.ElkeszultDatum,
             this.Statusz});
             this.DG_Fooldal.Location = new System.Drawing.Point(12, 91);
+            this.DG_Fooldal.MultiSelect = false;
             this.DG_Fooldal.Name = "DG_Fooldal";
             this.DG_Fooldal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DG_Fooldal.Size = new System.Drawing.Size(1228, 424);

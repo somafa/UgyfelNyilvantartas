@@ -23,5 +23,9 @@ namespace UgyfelNyilvantartas
         {
 
         }
+        public override string ToString()
+        {
+            return megnevezes;
+        }
     }
 }
